@@ -11,13 +11,16 @@ export class GithubService {
 
    }
 
-
+  get(){
+    var a = this.http.get("https://api.github.com/users");
+    return a;
+  }
    getUser(username:string):Observable<any>{
-     var a = this.http.get("https://api.github.com/users/"+username);
-     return a;
+      var a = this.http.get("https://api.github.com/users/"+username);
+    return a;
    }
-
    getRepos(userName:string):Observable<any>{
-    return this.http.get("https://api.github.com/users/"+userName+"/repos");
+      var a= this.http.get("https://api.github.com/users/"+userName+"/repos");
+    return a;
    }
 }

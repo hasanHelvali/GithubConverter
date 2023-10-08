@@ -1,27 +1,6 @@
-<input type="text" placeholder="Kullanici Adi Giriniz" #userName (keydown.enter)="sorgula(userName.value)">
-<div>
-  {{user.UserName}} <br>
-  {{user.Name}} <br>
-  {{user.Bio}} <br>
-  {{user.Blog}} <br>
-  {{user.Company}} <br>
-  {{user.Email}} <br>
-  {{user.Followers}} <br>
-  {{user.Following}} <br>
-  {{user.InstagramUrl}} <br>
-  {{user.Location}} <br>
-  {{user.TwitterUrl}} <br>
-  {{user.LinkedInUrl}} <br>
-  {{user.Url}} <br>
-  <img src="{{user.Photo}}" class="rounded-pill" alt=""><br>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<div *ngIf="repos">
-  <div *ngFor="let item of repos">
-    <span>{{item.RepoName}}</span> |
-    <span>{{item.Url}}</span> |
-    <span>{{item.Description}}</span> |
-    <span>------------------------------------</span>
-    <br>
-  </div>
-</div>
+<app-navbar></app-navbar>
+<app-home></app-home>
+
+<app-footer></app-footer>

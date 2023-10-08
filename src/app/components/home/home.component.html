@@ -1,0 +1,74 @@
+<div class="container form mt-1">
+  <input type="text" placeholder="Donusturmek Istediginiz Profilin Kullanici Adini Giriniz" #userName (keydown.enter)="sorgula(userName.value)"
+  class="form-control border-black" value="gncyyldz">
+</div>
+  <hr >
+  <div *ngIf="isActive" class=" text-white ">
+    <div class="row d-flex  justify-content-center">
+      <div class="col-lg-3 col-md-4 bg-dark rounded">
+        <span>Kisisel Bilgiler</span> <hr>
+        Username: {{user.UserName}} <br>
+        Name: {{user.Name}} <br>
+        Bio: {{user.Bio}} <br>
+        Blog: {{user.Blog}} <br>
+        Company:{{user.Company}} <br>
+        Email:{{user.Email}} <br>
+        Followers:{{user.Followers}} <br>
+        Following:{{user.Following}} <br>
+        Location:{{user.Location}} <br>
+        Url: <a href=""></a> <br>
+      </div>
+      <div class="col-lg-6 col-md-4 bg-dark rounded" style="margin-left: 1px; margin-right: 1px;">
+        <img src="{{user.Photo}}" class="rounded-pill mx-auto d-block" alt=""><br>
+      </div>
+      <div class="col-lg-2 col-md-3 bg-dark rounded">
+        <span>Iletisim Bilgileri</span> <hr>
+        <a type="button" class="btn btn-floating btn-dark btn-lg text-light" href="{{user.Url}}"><i class="fab fa-github"></i> | Github</a>
+        <a type="button" class="btn btn-floating btn-dark btn-lg text-light" href="{{user.TwitterUrl}}"><i class="fab fa-twitter"></i> | Twitter</a>
+        <a type="button" class="btn btn-floating btn-dark btn-lg text-light" href=""><i class="fab fa-linkedin"></i> | LinkedIn</a>
+        <a type="button" class="btn btn-floating btn-dark btn-lg text-light" href=""><i class="fab fa-google-plus-g"></i> | Google</a>
+        <!-- Instagram:{{user.InstagramUrl}} <br> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container m-3 p-3 mx-auto  text-white">
+    <div class="row d-flex align-items-center justify-content-center">
+      <div class="col-lg-4 col-md-6 text-center mt-1 border-radius my-3 " *ngFor="let item of repos">
+        <div class="card bg-dark text-white" style="width: 18rem; height: 18rem;"  >
+          <div class="card-body overflow-auto">
+            <h5 class="card-title">{{item.RepoName}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Proje Açıklamalari</h6> <hr>
+            <p class="card-text">{{item.Description}}</p>
+            <a href="{{item.Url}}" class="card-link text-white">Projeye Git</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <div>
+  {{user.UserName}} <br>
+  {{user.Name}} <br>
+  {{user.Bio}} <br>
+  {{user.Blog}} <br>
+  {{user.Company}} <br>
+  {{user.Email}} <br>
+  {{user.Followers}} <br>
+  {{user.Following}} <br>
+  {{user.InstagramUrl}} <br>
+  {{user.Location}} <br>
+  {{user.TwitterUrl}} <br>
+  {{user.LinkedInUrl}} <br>
+  {{user.Url}} <br>
+</div>
+
+<div *ngIf="repos">
+  <div *ngFor="let item of repos">
+    <span>{{item.RepoName}}</span> |
+    <span>{{item.Url}}</span> |
+    <span>{{item.Description}}</span> |
+    <span>------------------------------------</span>
+    <br>
+  </div>
+</div> -->
