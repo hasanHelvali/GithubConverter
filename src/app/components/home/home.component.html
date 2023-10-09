@@ -1,6 +1,6 @@
 <div class="container form mt-1">
-  <input type="text" placeholder="Donusturmek Istediginiz Profilin Kullanici Adini Giriniz" #userName (keydown.enter)="sorgula(userName.value)"
-  class="form-control border-black" value="gncyyldz">
+  <input type="text" placeholder="Donusturmek Istediginiz Github Profilinin Kullanici Adini Giriniz" #userName (keydown.enter)="sorgula(userName.value)"
+  class="form-control border-black" value="">
 </div>
   <hr >
   <div *ngIf="isActive" class=" text-white ">
@@ -47,28 +47,4 @@
     </div>
   </div>
 
-<!-- <div>
-  {{user.UserName}} <br>
-  {{user.Name}} <br>
-  {{user.Bio}} <br>
-  {{user.Blog}} <br>
-  {{user.Company}} <br>
-  {{user.Email}} <br>
-  {{user.Followers}} <br>
-  {{user.Following}} <br>
-  {{user.InstagramUrl}} <br>
-  {{user.Location}} <br>
-  {{user.TwitterUrl}} <br>
-  {{user.LinkedInUrl}} <br>
-  {{user.Url}} <br>
-</div>
 
-<div *ngIf="repos">
-  <div *ngFor="let item of repos">
-    <span>{{item.RepoName}}</span> |
-    <span>{{item.Url}}</span> |
-    <span>{{item.Description}}</span> |
-    <span>------------------------------------</span>
-    <br>
-  </div>
-</div> -->

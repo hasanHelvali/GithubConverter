@@ -23,17 +23,16 @@ export class HomeComponent {
   sorgula(username:string){
     // this.user=null;
     this.repos=[];
-    this.isActive=true;
     this.githubApi.getUser(username).pipe(
       catchError(()=>of(alert("Boyle bir kullanici blunamadi.")))
     )
     .subscribe(
       data=>{
-        if(data == null)
-          alert("Ilgili bilgiler getirilemedi.")
+        if(data == null){
+          this.isActive=false
+        }
         else{
-          console.log(data);
-
+          this.isActive=true;
           this.user.UserName=data["login"]
           this.user.Bio=data["bio"]
           this.user.Blog=data["blog"]
